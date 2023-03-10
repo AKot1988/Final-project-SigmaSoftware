@@ -1,0 +1,21 @@
+@import "../../assets/fonts/fonts.scss";
+@import "../../assets/colors/colors.scss";
+@import "../../assets/commons/mixins.scss";
+
+.button {
+    width: 100px;
+    height: 32px;
+    background-color: $second_button_color;
+
+    border-radius: 15px 0 15px 0;
+
+    @include flex (center, center, row);
+    cursor: pointer;
+    &__text {
+        @include fontOpen (600, 16, 100%, $main_button_font_color);
+        margin-right: 11px;
+    }
+    &:hover {
+        background-color: $button--color--hover;
+    }
+}

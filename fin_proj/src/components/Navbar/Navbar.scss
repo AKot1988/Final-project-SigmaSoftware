@@ -1,0 +1,93 @@
+@import '../../assets/fonts/fonts.scss';
+@import '../../assets/colors/colors.scss';
+@import '../../assets/commons/mixins.scss';
+
+.navBarContainer {
+  max-width: 1920px;
+  padding-top: 100px;
+  margin: 0 auto;
+  @include  flex (center, center, row);
+  // gap: 300px;
+  justify-content: space-around;
+  
+
+  &__logo {
+    width: 150px;
+    height: auto;
+  }
+
+  &__menu {
+    max-width: 810px;
+    @include  grid  (repeat(8, 1fr), 30px, 10px);
+
+
+
+    // @include grid (repeat(8, 1fr), 0px, 10px);
+    align-items: center;
+    justify-content: center;
+    
+    &__item {
+      padding: 0 10px;
+      @include fontOpen (600, 16, 100%, $main_font_color);
+      @include flex (center, center, row);
+      cursor: pointer;
+      margin: 0;
+      height: 100%;
+      text-transform: uppercase;
+      text-shadow: 0px 1px 3px $main_shadow_color;
+      border-radius: 20px;
+      border: 5px solid transparent;
+      transition: all 0.3s;
+
+
+      &:hover {
+        transition: all 0.3s;
+        color: $main_button_color;
+        text-shadow: 0px 2px 5px $main_button_color;
+        border-radius: 20px;
+        border: 5px solid $main_button_color;
+      }
+    }
+  }
+
+  &__button {
+    width: 100px;
+    height: 30px;
+    @include fontOpen (600, 16, 100%, $second_font_color);
+    border-radius: 15px 0 15px 0;
+    background-color: $second_button_color;
+    border-color: $second_button_color;
+    cursor: pointer;
+    padding: 0; 
+    
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .navBarContainer {
+    max-width: 720px;
+    // height: 450px;
+    margin: 50px auto;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 150px;
+    grid-template-rows: 50px 300px;
+    justify-content: center;
+    align-items: start;
+    gap: 50px;
+
+    &__logo {
+      height: auto;
+      @include flex (center, center, column)
+    }
+    &__menu {
+      max-height: 350px;
+      padding: 0px;
+      @include flex (center, center, column)
+    }
+  }
+}
+
+
+
+

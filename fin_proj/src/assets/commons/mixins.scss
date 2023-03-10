@@ -1,0 +1,43 @@
+// -----------display--mixins------------------------
+@mixin flex ($align, $justify, $flex-direction) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $flex-direction;
+}
+
+@mixin grid ($grid-template-columns, $grid-auto-rows, $grid-gap) {
+  display: grid;
+  grid-template-columns: $grid-template-columns;
+  grid-auto-rows: $grid-auto-rows;
+  // grid-auto-rows: minmax(200px, 300px);
+  grid-gap: $grid-gap;
+}
+
+// -----------fonts--mixins------------------------
+@mixin fontPoppins ($weight, $size, $line-height, $color) {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line-height;
+  color: $color;
+}
+
+@mixin fontOpen ($weight, $size, $line-height, $color) {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line-height;
+  color: $color;
+}
+
+@mixin fontRaleway ($weight, $size, $line-height, $color) {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line-height;
+  color: $color;
+}
